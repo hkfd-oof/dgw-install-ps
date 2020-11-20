@@ -10,6 +10,7 @@ $power_bi_gate_install_url ="https://download.microsoft.com/download/D/A/1/DA1FD
 $power_bi_gate_download_path="$PSScriptRoot\GatewayInstall.exe"
 
 #Installing Power BI Gateway
-Write-Output "Installing Power BI GateWay =" $power_bi_gate_install_url
+Write-Output "Downloading Power BI GateWay =" $power_bi_gate_install_url
+Invoke-WebRequest -Uri $power_bi_gate_install_url -OutFile $power_bi_gate_download_path
 Write-Output "Initiating Install for Power BI Gtwy"
 Start-Process -filepath $power_bi_gate_download_path -ArgumentList "/Q" -Wait
