@@ -1,4 +1,4 @@
-< # Install PowerShell 7 with powershell
+<# Install PowerShell 7 with powershell
 Invoke-Expression "& { $(Invoke-RestMethod https://aka.ms/install-powershell.ps1) } -UseMSI -quiet"
 
 # Refresh the path for PowerShell 7 afer installation
